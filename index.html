@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<style>
+			body {
+				background-image: url("bg.jpg");
+				background-size:cover;
+				background-attachment:fixed;
+				font-family: Arial;
+			}
+			p {
+				text-align:center;
+				text-shadow: 0px 0px 5px white;
+				font-size: 40px
+			}
+			
+			h1 {
+				text-align:center;
+				text-shadow: 0px 0px 5px white;
+				font-size: 50px
+			}
+		</style>
+		
+		<script>
+			let iceBreak1 = 0;
+			let iceBreak2 = 0;
+			let iceBreak3 = 0;
+			let x = 0;
+			function iceBreaking(x) {
+				if (x == 1) {
+					iceBreak1++;
+					
+					if (iceBreak1 > 1)
+						document.getElementById("ice1").src = "2.png";
+					if (iceBreak1 > 3)
+						document.getElementById("ice1").src = "3.png";
+					if (iceBreak1 > 5)
+						document.getElementById("ice1").src = "4.png";
+					if (iceBreak1 > 7)
+						document.getElementById("ice1").src = "5.png";
+					if (iceBreak1 > 9) {
+						document.getElementById("ice1").src = "self.jpg";
+						document.getElementById("p1").innerHTML = "Guess the word!";
+						document.getElementById("word1").innerHTML = "_ _ _ _";
+					}
+				}
+				
+				if (x == 2) {
+					iceBreak2++;
+					
+					if (iceBreak2 > 1)
+						document.getElementById("ice2").src = "2.png";
+					if (iceBreak2 > 3)
+						document.getElementById("ice2").src = "3.png";
+					if (iceBreak2 > 5)
+						document.getElementById("ice2").src = "4.png";
+					if (iceBreak2 > 7)
+						document.getElementById("ice2").src = "5.png";
+					if (iceBreak2 > 9) {
+						document.getElementById("ice2").src = "soul.png";
+						document.getElementById("p2").innerHTML = "Guess the word!";
+						document.getElementById("word2").innerHTML = "_ _ _ _";
+					}
+				}
+				
+				if (x == 3) {
+					iceBreak3++;
+					
+					if (iceBreak3 > 1)
+						document.getElementById("ice3").src = "2.png";
+					if (iceBreak3 > 3)
+						document.getElementById("ice3").src = "3.png";
+					if (iceBreak3 > 5)
+						document.getElementById("ice3").src = "4.png";
+					if (iceBreak3 > 7)
+						document.getElementById("ice3").src = "5.png";
+					if (iceBreak3 > 9) {
+						document.getElementById("ice3").src = "plato.jpg";
+						document.getElementById("p3").innerHTML = "Guess the word!";
+						document.getElementById("word3").innerHTML = "_ _ _ _ _";
+					}
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<h1>Ice Breaker</h1>
+		<center>
+			<table style="padding:0% 5%; margin:0">
+				<tr style="margin:10%">
+					<td style="padding:10px">
+						<p id="p1">Break the Ice!</p>
+						<img id="ice1" src="1.png" width="300px" height="300px" onclick="iceBreaking(1)">
+					</td>
+					<td style="padding:10px">
+						<p id="p2">Break the Ice!</p>
+						<img id="ice2" src="1.png" width="300px" height="300px" onclick="iceBreaking(2)">
+					</td>
+					<td style="padding:10px">
+						<p id="p3">Break the Ice!</p>
+						<img id="ice3" src="1.png" width="300px" height="300px" onclick="iceBreaking(3)">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p style="color:red; text-shadow: 0px 0px 5px crimson" id="word1" onclick="this.innerHTML = 'SELF'"></p>
+					</td>
+					<td>
+						<p style="color:red; text-shadow: 0px 0px 5px crimson" id="word2" onclick="this.innerHTML = 'SOUL'"></p>
+					</td>
+					<td>
+						<p style="color:red; text-shadow: 0px 0px 5px crimson" id="word3" onclick="this.innerHTML = 'PLATO'"></p>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
